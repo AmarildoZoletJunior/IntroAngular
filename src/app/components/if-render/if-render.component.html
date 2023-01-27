@@ -1,0 +1,21 @@
+<div class="class">
+    <h1 class="tituloAulas">Aula de diretiva 02 if</h1>
+    <h3 class="descricaoAulas">Testando o uso de diretivas como if, ifelse,ifthen</h3>
+<h1 [ngStyle]="{'background': decisao ? 'blue' : 'red'}">testeeeeeeeeee</h1>
+<div *ngIf="decisaoAbaixo">Estamos mostrando isto por que foi permitido</div>
+
+<div *ngIf ="nome === 'Amarildo'; else NomeNaoE">
+    <h1>Nome: {{nome}}</h1>
+</div>
+
+<ng-template #NomeNaoE>
+    <div>
+        <h1>Nome não encontrado</h1> 
+    </div>
+</ng-template>
+
+
+<button (click)="teste()">clique aqui </button>
+
+    
+</div> <!-- Final-->

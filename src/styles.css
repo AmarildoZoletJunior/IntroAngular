@@ -1,0 +1,30 @@
+.class{
+    border-bottom: 2px solid black;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+body{
+    padding-bottom: 500px;
+}
+.tituloAulas{
+    text-align: center;
+    color: cyan;
+}
+.descricaoAulas{
+    text-align: center;
+    color: black;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: red;
+    margin: 5px;
+    text-align: center;
+}

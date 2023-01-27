@@ -1,0 +1,13 @@
+<div class="class">
+    <h1 class="tituloAulas">Aula sobre iteração foreach</h1>
+
+    <div class="cards">
+    <div class="card" *ngFor="let item of items">
+          <h2>Nome:{{item.name | titlecase}}</h2>
+          <p>Profissão:{{item.profissao}}</p>
+          Idade:{{item.idade}} anos
+          <button class="clickButton" (click)="dispararEvento(item)">Clique Aqui</button>
+          <button (click)="RemoverProfessional(item)">Excluir</button>
+    </div>
+</div>
+</div>
