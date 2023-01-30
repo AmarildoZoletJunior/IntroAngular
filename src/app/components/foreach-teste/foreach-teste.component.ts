@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { TitleStrategy } from '@angular/router';
+import { Livro } from 'src/app/Interfaces/Livro';
 import {Professional} from 'src/app/Interfaces/Professional';
 
 import { ListService } from 'src/app/service/list.service';
@@ -16,17 +18,26 @@ items: Professional[] = [
   {id:4,name:'Jose', profissao:'Desenvolvedor',idade: 36},
   {id:5,name:'Jose', profissao:'Desenvolvedor',idade: 40}
 ]
+
+livros: Livro[] = [
+
+]
 Aviso = '';
 dispararEvento(item: Professional):void {
   console.log(`${item.name},${item.profissao},${item.idade}`);
 }
+dispararTeste(){
+  this.getBook()
+}
 
 constructor(private listService: ListService){
-
 }
 
 RemoverProfessional(pessoa: Professional){
   console.log("Removendo pessoa");
   this.items = this.listService.remover(this.items,pessoa);
+}
+getBook():void{
+ this.listService.GetAll().subscribe(x => {this.livros = x})
 }
 }
