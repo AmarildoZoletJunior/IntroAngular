@@ -14,6 +14,7 @@ import { EventsComponent } from './components/events/events.component';
 import { EmitterTesteComponent } from './components/emitter-teste/emitter-teste.component';
 import { ForeachTesteComponent } from './components/foreach-teste/foreach-teste.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { HttpTesteUmComponent } from './components/http-teste-um/http-teste-um.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     EmitterTesteComponent,
     ForeachTesteComponent,
     TwoWayBindingComponent,
+    HttpTesteUmComponent,
   ],
   imports: [
     BrowserModule,

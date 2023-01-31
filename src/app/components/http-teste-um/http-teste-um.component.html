@@ -1,0 +1,7 @@
+<div class="class" *ngIf="livro">
+    <h1>Nome do livro:{{livro.nome}}</h1>
+    <p>Nome do autor:{{livro.autor.nome}}</p>
+    <p>Categoria:{{livro.categoria.tipoCategoria}}</p>
+    <p>Data de lançamento: {{livro.dataLancamento}}</p>
+    <a class="buttonClick" routerLink="/for">Voltar</a>
+</div>
