@@ -6,4 +6,5 @@ export interface Livro{
     categoriaId:number,
     isbn:number,
     id:number
+    urlImage:string
 } 

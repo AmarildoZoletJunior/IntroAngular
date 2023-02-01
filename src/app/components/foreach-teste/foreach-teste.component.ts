@@ -37,7 +37,16 @@ export class ForeachTesteComponent implements OnInit {
     this.items = this.listService.remover(this.items, pessoa);
   }
   getBook(): void {
-    this.listService.GetAll().subscribe(x => { this.livros = x })
+    
+    this.listService.GetAll().subscribe(x => { 
+      
+      x.forEach(x => {
+        let local = x.urlImage.indexOf("assets");
+        let variavel = x.urlImage.slice(local,x.urlImage.length);
+        x.urlImage = variavel;
+      })
+      this.livros = x 
+    })
   }
   deletarLivro(isbn: number): void {
     this.livros = this.livros.filter(a => a.isbn != isbn);

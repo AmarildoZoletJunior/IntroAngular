@@ -1,8 +1,10 @@
 <div class="class">
   <h1 class="tituloAulas">Aula sobre iteração foreach</h1>
+
   <div class="cards" *ngIf="livros.length > 0; else mensagemvazia">
     <div class="card" *ngFor="let item of livros">
       <h2>Nome do livro:{{item.nome | titlecase}}</h2>
+      <img class="imagens" src="{{item.urlImage}}">
       <p>ISBN:{{item.isbn}}</p>
       Quantidade de paginas:{{item.quantidadePagina}}
       <br>
